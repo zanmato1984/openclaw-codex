@@ -1,28 +1,29 @@
-# OpenClaw 学习与排障目标说明
+# OpenClaw Learning and Troubleshooting Objectives
 
-## 目标
+## Goals
 
-在本目录下，我希望你围绕 openclaw 做两件事：
+In this directory, I want you to focus on two things around OpenClaw:
 
-1. 基于源码和文档，帮助我系统学习和理解 openclaw 的架构、配置、运行机制与常见工作流。
-2. 结合我本机实际配置与运行现象，协助我排查和修复本地 openclaw 的使用问题。
+1. Based on the source code and documentation, help me systematically learn and understand OpenClaw's architecture, configuration, runtime behavior, and common workflows.
+2. Using my local machine's actual configuration and runtime behavior, help me troubleshoot and fix local OpenClaw usage issues.
 
-## 工作方式
+## Working Style
 
-- 优先依据本地源码与文档给出结论，必要时再补充外部资料。
-- 排障时先复现、再定位、再给出可验证的修复步骤。
-- 关键结论尽量附上对应文件路径、配置项或日志位置。
-- 避免只给理论建议，尽量提供可直接执行的命令与检查清单。
-- 当建议任何方案时，不考虑修改 openclaw 源码的路径；仅限在当前 openclaw 的既有能力范围内给出方案。
+- Treat the `openclaw` directory in the current working directory as the OpenClaw source tree. If it does not exist, clone it from https://github.com/openclaw/openclaw.
+- Prioritize conclusions based on local source code and documentation; supplement with external references only when necessary.
+- During troubleshooting, first reproduce the issue, then locate the cause, and finally provide verifiable remediation steps.
+- Whenever possible, attach key conclusions to concrete file paths, configuration keys, or log locations.
+- Avoid purely theoretical advice; provide directly executable commands and checklists whenever possible.
+- When proposing any solution, do not consider paths that modify OpenClaw source code; limit recommendations to existing capabilities in the current OpenClaw setup.
 
-## 配置维护
+## Configuration Maintenance
 
-- 用户可能随时更改本机上的 OpenClaw 配置文件；处理配置相关问题时，先确认当前实际生效的配置文件路径。
-- 当前这台机器上的生效配置文件是软链接到 `~/dev/bunklaw` 下的同名文件。
-- 如果这个配置文件发生变化，需要到 `~/dev/bunklaw` 下提交并推送对应配置文件的改动。
+- The user may change the OpenClaw configuration file on this machine at any time; for configuration-related issues, first confirm the actually effective config file path.
+- On this machine, the effective configuration file is a symlink to the file with the same name under `~/dev/bunklaw`.
+- If this configuration file changes, commit and push the corresponding config file updates under `~/dev/bunklaw`.
 
-## 输出期望
+## Expected Output
 
-- 学习类问题：给出结构化讲解（概念、模块关系、配置含义、调用链路）。
-- 故障类问题：给出根因分析、修复方案、验证结果与后续建议。
-- 修改配置或文件前，先说明变更点与影响范围。
+- Learning questions: provide structured explanations (concepts, module relationships, configuration meanings, and call flows).
+- Troubleshooting questions: provide root cause analysis, fix plan, verification results, and follow-up recommendations.
+- Before modifying any configuration or file, first explain the change points and impact scope.
